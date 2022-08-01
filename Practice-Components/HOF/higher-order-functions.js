@@ -10,19 +10,20 @@ function callMe() {
 /**
  * Below is the first class function which is store in *variable, x
  */
-let x = () => console.log('Successfully called first class function');
+let firstClassFunction = () =>
+  console.log('Successfully called first class function');
 
 let button = document.getElementById('test-button');
 /*
  *Here addEventListener() is a HOF which takes another function
  *as a paramter
  */
-button.addEventListener('click', x);
+button.addEventListener('click', firstClassFunction);
 
 /**
  * Below is the imediately invoked function
  */
 (() => {
-  console.log(callMe()());
+  console.log(callMe()()); //Here double () is used because callMe() will return a function, since call() is HOF, so to execute returned function () is used.
   //return console.log('IIF is called');
 })();
