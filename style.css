@@ -4,9 +4,5 @@ h2 {
 }
 .parent-container {
   display: inline-block;
-  border: 3px solid red;
+  border-radius: 3px;
 }
-
-/* #test-button {
-  box-shadow: 5px;
-} */

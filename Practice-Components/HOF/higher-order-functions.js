@@ -4,3 +4,7 @@ function callMe() {
 
 let button = document.getElementById('test-button');
 button.addEventListener('click', callMe);
+
+(() => {
+  return console.log('IIF is called');
+})();
