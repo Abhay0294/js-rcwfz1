@@ -1,7 +1,8 @@
 document
-  .getElementById('test-button')
+  .getElementById('test-button2')
   .addEventListener('click', function (event) {
     event.preventDefault();
-    console.log(this.getAttribute('href'));
+    event.stopPropagation();
+    console.log('Hello Abhay', event);
     /* Do some other things*/
   });
