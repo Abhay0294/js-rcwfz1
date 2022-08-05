@@ -6,3 +6,6 @@ h2 {
   display: inline-block;
   border-radius: 3px;
 }
+body {
+  background-color: black;
+}
