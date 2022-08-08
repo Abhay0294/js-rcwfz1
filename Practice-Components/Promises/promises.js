@@ -13,7 +13,7 @@ function copyHomeWork() {
 doHomeWork(copyHomeWork);
 */
 
-/**
+/*
  * Actual blueprint of the promise
  */
 // const dataPromise = new Promise((resolve, reject) => {
@@ -32,7 +32,6 @@ doHomeWork(copyHomeWork);
 /**
  * Actual promise implementation
  */
-
 function imageLoad(url) {
   return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
@@ -52,14 +51,6 @@ function imageLoad(url) {
   });
 }
 
-// imageLoad(
-//   'https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/412/618/square_480/JSTesting_4_ReactComponents.png'
-// )
-//   .then((data) => console.log(data))
-//   .catch((error) => {
-//     console.log('Error Occured', error);
-//   });
-
 var body = document.querySelector('body');
 var myImage = new Image();
 // Call the function with the URL we want to load, but then chain the
@@ -71,6 +62,7 @@ imageLoad(
     // The first runs when the promise resolves, with the request.response
     // specified within the resolve() method.
     var imageURL = window.URL.createObjectURL(response);
+    console.log('>>>><<<<<', imageURl);
     myImage.src = imageURL;
     body.appendChild(myImage);
     // The second runs when the promise
