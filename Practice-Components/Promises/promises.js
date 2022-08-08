@@ -15,17 +15,15 @@ doHomeWork(copyHomeWork);
 /**
  * Actual blueprint of the promise
  */
-// const dataPromise = new Promise((resolve, reject) => {
-//   setTimeout(() => resolve('data'), 1000); // represents an async operation
-// })
-//   .then((data) => {
-//     console.log('>>>>Success Data<<<<', data);
-//   })
-//   .catch((error) => {
-//     console.log('@@@Error Occurred@@@', error);
-//   })
-//   .finally(() => {
-//     console.log('###Finally called###');
-//   });
-
-
+const dataPromise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('data'), 1000); // represents an async operation
+})
+  .then((data) => {
+    console.log('>>>>Success Data<<<<', data);
+  })
+  .catch((error) => {
+    console.log('@@@Error Occurred@@@', error);
+  })
+  .finally(() => {
+    console.log('###Finally called###');
+  });
