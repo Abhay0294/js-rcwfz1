@@ -37,7 +37,7 @@ function imageLoad(url) {
   return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
     request.open('GET', url);
-    request.responseType = 'Response:200';
+    request.responseType = 'blob';
     request.onload = function () {
       if (request.status === 200) {
         resolve(request.response);
