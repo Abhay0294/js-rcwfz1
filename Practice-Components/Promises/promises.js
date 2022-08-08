@@ -46,13 +46,37 @@ function imageLoad(url) {
       }
     };
     request.send();
+    request.onerror = function () {
+      reject(Error);
+    };
   });
 }
 
+// imageLoad(
+//   'https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/412/618/square_480/JSTesting_4_ReactComponents.png'
+// )
+//   .then((data) => console.log(data))
+//   .catch((error) => {
+//     console.log('Error Occured', error);
+//   });
+
+var body = document.querySelector('body');
+var myImage = new Image();
+// Call the function with the URL we want to load, but then chain the
+// promise then() method on to the end of it. This contains two callbacks
 imageLoad(
-  'https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/412/618/square_480/JSTesting_4_ReactComponents.png'
-)
-  .then((data) => console.log(data))
-  .catch((error) => {
-    console.log('Error Occured', error);
-  });
+  'https://static.vecteezy.com/system/resources/previews/005/594/161/non_2x/qr-code-label-sample-qr-code-for-scan-vector.jpg'
+).then(
+  function (response) {
+    // The first runs when the promise resolves, with the request.response
+    // specified within the resolve() method.
+    var imageURL = window.URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+    // The second runs when the promise
+    // is rejected, and logs the Error specified with the reject() method.
+  },
+  function (Error) {
+    console.log(Error);
+  }
+);
