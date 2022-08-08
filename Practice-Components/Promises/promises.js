@@ -1,19 +1,4 @@
 /*
- * Simple explanation of the prmise
- */
-
-/* function doHomeWork(callback) {
-  console.log('Doing Homework');
-  callback();
-}
-
-function copyHomeWork() {
-  console.log('HomeWork copied');
-}
-doHomeWork(copyHomeWork);
-*/
-
-/*
  * Actual blueprint of the promise
  */
 // const dataPromise = new Promise((resolve, reject) => {
@@ -32,6 +17,10 @@ doHomeWork(copyHomeWork);
 /**
  * Actual promise implementation
  */
+var body = document.querySelector('body');
+var myImage = new Image();
+console.log('@@@@@', myImage);
+
 function imageLoad(url) {
   return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
@@ -50,10 +39,6 @@ function imageLoad(url) {
     };
   });
 }
-
-var body = document.querySelector('body');
-var myImage = new Image();
-console.log('@@@@@', myImage);
 
 imageLoad(
   'https://static.vecteezy.com/system/resources/previews/005/594/161/non_2x/qr-code-label-sample-qr-code-for-scan-vector.jpg'
