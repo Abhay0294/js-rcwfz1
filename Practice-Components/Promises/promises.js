@@ -53,20 +53,17 @@ function imageLoad(url) {
 
 var body = document.querySelector('body');
 var myImage = new Image();
-// Call the function with the URL we want to load, but then chain the
-// promise then() method on to the end of it. This contains two callbacks
+console.log('@@@@@', myImage);
+
 imageLoad(
   'https://static.vecteezy.com/system/resources/previews/005/594/161/non_2x/qr-code-label-sample-qr-code-for-scan-vector.jpg'
 ).then(
   function (response) {
-    // The first runs when the promise resolves, with the request.response
-    // specified within the resolve() method.
     var imageURL = window.URL.createObjectURL(response);
-    console.log('>>>><<<<<', imageURl);
+    console.log('>>>><<<<<', imageURL);
     myImage.src = imageURL;
+    console.log('<<<<<>>>>>', myImage);
     body.appendChild(myImage);
-    // The second runs when the promise
-    // is rejected, and logs the Error specified with the reject() method.
   },
   function (Error) {
     console.log(Error);
