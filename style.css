@@ -9,3 +9,8 @@ h2 {
 body {
   background-color: black;
 }
+
+.test-div {
+  border: 2px solid red;
+  height: 40px;
+}
