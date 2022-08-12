@@ -1,16 +1,19 @@
-const button = document.querySelector('#test-button');
-const button2 = document.querySelector('#test-button2');
-const testDiv = document.querySelector('#test-div');
+const button = document.querySelector('.test-button');
+const button2 = document.querySelector('.test-button2');
+const testDiv = document.querySelector('.test-div');
 
-const myEvent = new CustomEvent('myevent', {
-  detail: {},
-  bubbles: true,
-  cancelable: true,
-  composed: false,
+const event = new Event('start');
+
+document.addEventListener('start', () => {
+  console.log('Start event triggered');
 });
 
-document.querySelector('#test-button').dispatchEvent(myEvent);
+(() => {
+  if (1) {
+    document.dispatchEvent(event);
+  }
+})();
 
-document.querySelector('#test-button').addEventListener('myevent', (event) => {
-  console.log("I'm listening on a custom event");
+button.addEventListener('start', () => {
+  console.log('cooooooooo');
 });
