@@ -19,3 +19,9 @@ console.log(set);
 //It can be used to find if the given element exits in a list or not
 console.log(set.has(65));
 console.log(modified_array);
+
+//FUnctions that can be used with set
+// 1. size
+// 2. has
+// 3.delete
+// 4. add
