@@ -4,9 +4,14 @@
 var array = [55, 44, 65, 55, 44, 65];
 //transforms the array to an set
 var set = new Set(array);
+
 //transforms the set to array type
 var modified_array = [...set];
 
+//For iterating over the set
+for (const item of set) {
+  console.log(item);
+}
 var stringTest = 'Abhaay';
 //It can be used to remove duplicate values in strings and is case-sensitive
 console.log(new Set(stringTest));
