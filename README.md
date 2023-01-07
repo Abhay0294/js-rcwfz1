@@ -1,3 +1,3 @@
-# js-rcwfz1
+# JavaScript
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-rcwfz1)
+This repository deals in making understand JS core concepts
