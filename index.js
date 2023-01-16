@@ -8,3 +8,4 @@ import './style.css';
 // import './Practice-Components/Miscellaneous/array-related-functions';
 // import './Practice-Components/RegEx-Expressions/regEx';
 import './Practice-Components/Debounce/debounce';
+import './Practice-Components/Debounce/debounce-search-bar';
